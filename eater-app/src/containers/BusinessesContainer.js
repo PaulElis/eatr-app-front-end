@@ -30,7 +30,7 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        <Businesses />
+        <Businesses businesses={this.state.businesses}/>
       </div>
     )
   }

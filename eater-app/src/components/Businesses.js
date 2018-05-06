@@ -8,11 +8,14 @@ class Businesses extends React.Component {
 
   render(){
 
-
+    const businesses = this.props.businesses.map((business, index) => {
+      return <BusinessCard business={business} index={index} key={index} image={business.image}/>
+      }
+    )
 
     return(
       <div>
-        <BusinessCard />
+        {businesses}
       </div>
     )
   }
