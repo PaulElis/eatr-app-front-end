@@ -1,4 +1,5 @@
 import React from 'react'
+import {Grid, Card, Icon, Image} from 'semantic-ui-react';
 
 class BusinessDetails extends React.Component {
 
@@ -8,21 +9,38 @@ class BusinessDetails extends React.Component {
       this.props.addToFavorites(this.props.business)
     } else if (this.props.removeFromFavorites) {
       this.props.removeFromFavorites(this.props.business)
-    } 
+    }
 	}
 
   render() {
     return (
-      <div>
-        <ul>
-          <li><b>{this.props.business.name}</b></li>
-          <img src={this.props.image} onClick={this.handleClick} alt={this.props.index} width='190' height='150' />
-          <li>{this.props.business.cuisine} {this.props.business.price}</li>
-          <li>{this.props.business.review_count} Reviews / Rating: {this.props.business.rating}/5</li>
-          <li>{this.props.business.address}, {this.props.business.city}</li>
-          <li>{this.props.business.state} {this.props.business.zip_code}</li>
-        </ul>
-      </div>
+      <div class="ui link cards">
+      <div class="card">
+          <div class="image">
+            <img src={this.props.image} onClick={this.handleClick} alt={this.props.index} width='190' height='150' />
+          </div>
+          <div class="content">
+            <div class="header">
+            {this.props.business.name}
+            </div>
+            <div class="meta">
+            {this.props.business.cuisine}
+            </div>
+            <div class="description">
+            {this.props.business.address}<br /> {this.props.business.city}<br />
+            {this.props.business.state}<br /> {this.props.business.zip_code}
+            </div>
+          </div>
+        <div class="extra content">
+            <span class="right floated">
+          {this.props.business.review_count} Reviews / Rating: {this.props.business.rating}/5
+          </span>
+          <span class="left floated">
+          {this.props.business.price}
+          </span>
+        </div>
+        </div>
+        </div>
     )
   }
 
