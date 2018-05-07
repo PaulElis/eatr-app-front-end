@@ -8,14 +8,14 @@ class Users extends React.Component {
     users: []
   }
 
-  addUser = (name) => {
+  createUser = (username) => {
     this.setState({
-      users: [...this.state.users, {name}]
+      users: [...this.state.users, {username}]
     })
-    this.callFetch(name)
+    this.callFetch(username)
   }
 
-  callFetch = (name) => {
+  callFetch = (username) => {
     fetch("http://localhost:3000/api/v1/users",
       {
           headers: {
@@ -23,7 +23,7 @@ class Users extends React.Component {
             'Content-Type': 'application/json'
           },
           method: "POST",
-          body: JSON.stringify({name: name})
+          body: JSON.stringify({username: username})
       })
       .then(r => r.json())
       .then(data => {console.log(data)})
@@ -35,8 +35,8 @@ class Users extends React.Component {
 
     return(
       <div>
-        <b>Users:</b>
-        <NewUserForm />
+        <b>Create a User</b>
+        <NewUserForm createUser={this.createUser}/>
       </div>
     )
   }

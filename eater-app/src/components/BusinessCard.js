@@ -42,7 +42,7 @@ class BusinessCard extends React.Component {
   }
 
   render(){
-    console.log(this.state.reviews);
+    // console.log(this.state.reviews);
 
     return(
       <div>

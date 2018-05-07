@@ -9,7 +9,7 @@ class NewUserForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addUser(this.state.username)
+    this.props.createUser(this.state.username)
       this.setState({
         username: ""
       })
@@ -17,7 +17,7 @@ class NewUserForm extends React.Component {
 
   handleChange = event => {
 		this.setState({
-			[event.target.username]: event.target.value
+			[event.target.name]: event.target.value
 		})
 	}
 
@@ -26,7 +26,7 @@ class NewUserForm extends React.Component {
 
     return(
       <form onSubmit={this.handleSubmit}>
-        <input name="username" placeholder="Enter Name" value={this.state.username} onChange={this.handleChange}></input>
+        <input name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}></input>
         <input type='submit' />
       </form>
     )
