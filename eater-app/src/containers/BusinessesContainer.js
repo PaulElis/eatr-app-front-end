@@ -50,8 +50,8 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        <Favorites favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
-        <Businesses businesses={this.state.businesses} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
+        <Favorites favorites={this.state.favorites} currentUser={this.props.currentUser} removeFromFavorites={this.removeFromFavorites}/>
+        <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
     )
   }

@@ -9,7 +9,7 @@ class NavBar extends React.Component {
 
     return(
       <div>
-        <b>NavBar:</b>
+        <b>NavBar / Current User: {this.props.currentUser.username}</b>
       </div>
     )
   }

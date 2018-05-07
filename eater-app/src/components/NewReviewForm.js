@@ -4,15 +4,13 @@ import React from 'react'
 class NewReviewForm extends React.Component {
 
   state = {
-    name: "",
     text: ""
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addReview(this.state.name, this.state.text)
+    this.props.addReview(this.props.currentUser.id, this.state.text, this.props.business.id)
       this.setState({
-        name: "",
         text: ""
       })
   }
@@ -28,7 +26,7 @@ class NewReviewForm extends React.Component {
 
     return(
       <form onSubmit={this.handleSubmit}>
-        <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input>
+        {/* <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input> */}
         <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
         <input type='submit' />
       </form>

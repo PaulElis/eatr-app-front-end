@@ -26,17 +26,20 @@ class Users extends React.Component {
           body: JSON.stringify({username: username})
       })
       .then(r => r.json())
-      .then(data => {console.log(data)})
+      .then(user => this.handleFetch(user))
+  }
+
+  handleFetch = (user) => {
+    this.props.setCurrentUser(user)
   }
 
 
   render(){
 
-
     return(
       <div>
         <b>Create a User</b>
-        <NewUserForm createUser={this.createUser}/>
+        <NewUserForm createUser={this.createUser} currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser}/>
       </div>
     )
   }

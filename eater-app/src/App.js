@@ -6,15 +6,29 @@ import NavBar from './containers/NavBar'
 import Users from './containers/Users'
 
 class App extends Component {
+
+  state = {
+    currentUser: []
+  }
+
+  setCurrentUser = (user) => {
+    this.setState({
+      currentUser: user
+    })
+  }
+
   render() {
+
+    console.log(this.state.currentUser);
+
     return (
       <div className="App">
         <header>
-          Eatr App
+          <b> {this.state.currentUser.username ? `Eatr App welcomes ${this.state.currentUser.username}` : 'Eater App'}</b>
         </header>
-          <Users />
-          <NavBar />
-          <BusinessesContainer />
+          <Users currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser}/>
+          <NavBar currentUser={this.state.currentUser}/>
+          <BusinessesContainer currentUser={this.state.currentUser}/>
       </div>
     );
   }

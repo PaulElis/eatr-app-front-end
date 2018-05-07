@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Review = ({review, deleteReview}) => {
+const Review = ({currentUser, review, deleteReview}) => {
 
 	const handleDelete = (event) => {
 		deleteReview(review)
@@ -9,7 +9,7 @@ const Review = ({review, deleteReview}) => {
 
 	return (
 		<li>
-			{review.name} says: {review.text}
+			{currentUser.username} says: {review.text}
 			<button onClick={handleDelete} >DELETE</button>
 		</li>
 	)

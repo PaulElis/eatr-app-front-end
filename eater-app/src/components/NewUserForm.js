@@ -9,10 +9,10 @@ class NewUserForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.createUser(this.state.username)
       this.setState({
         username: ""
       })
+    this.props.createUser(this.state.username)
   }
 
   handleChange = event => {
