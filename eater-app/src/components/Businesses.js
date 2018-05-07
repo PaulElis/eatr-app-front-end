@@ -15,6 +15,7 @@ class Businesses extends React.Component {
 
     return(
       <div>
+        <b>Businesses:</b>
         {businesses}
       </div>
     )

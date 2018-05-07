@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class NewCommentForm extends React.Component {
+class NewReviewForm extends React.Component {
 
   state = {
     name: "",
@@ -10,7 +10,7 @@ class NewCommentForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addComment(this.state.name, this.state.text)
+    this.props.addReview(this.state.name, this.state.text)
       this.setState({
         name: "",
         text: ""
@@ -29,11 +29,11 @@ class NewCommentForm extends React.Component {
     return(
       <form onSubmit={this.handleSubmit}>
         <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input>
-        <input name="text" placeholder="Enter Comment" value={this.state.text} onChange={this.handleChange}></input>
+        <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
         <input type='submit' />
       </form>
     )
   }
 }
 
-export default NewCommentForm
+export default NewReviewForm

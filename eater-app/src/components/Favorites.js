@@ -1,16 +1,18 @@
 import React from 'react'
 
-import EachFavorite from '../components/EachFavorite';
+// import EachFavorite from '../components/EachFavorite';
+import BusinessDetails from '../components/BusinessDetails';
 
 class Favorites extends React.Component {
 
 
   render(){
-    const favorites = this.props.favorites.map((favorite, index) =>
-      <EachFavorite favorite={favorite} favorites={this.props.favorites} image={favorite.image} key={index} removeFromFavorites={this.props.removeFromFavorites}/>)
+    const favorites = this.props.favorites.map((business, index) =>
+      <BusinessDetails business={business} businesses={this.props.businesses} image={business.image} key={index} removeFromFavorites={this.props.removeFromFavorites}/>)
 
     return(
       <div>
+        <b>My Favorites:</b>
         <ul>
           {favorites}
         </ul>

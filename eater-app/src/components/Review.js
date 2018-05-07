@@ -1,19 +1,19 @@
 import React from 'react'
 
 
-const Comment = ({comment, deleteComment}) => {
+const Review = ({review, deleteReview}) => {
 
 	const handleDelete = (event) => {
-		deleteComment(comment)
+		deleteReview(review)
 	}
 
 	return (
 		<li>
-			{comment.name} says: {comment.text}
+			{review.name} says: {review.text}
 			<button onClick={handleDelete} >DELETE</button>
 		</li>
 	)
 }
 
 
-export default Comment
+export default Review
