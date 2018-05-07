@@ -12,9 +12,7 @@ class Favorites extends React.Component {
     return(
       <div>
         <b>My Favorites:</b>
-        <ul>
           {favorites}
-        </ul>
       </div>
     )
   }
