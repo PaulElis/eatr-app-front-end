@@ -25,11 +25,24 @@ class NewReviewForm extends React.Component {
   render(){
 
     return(
+<<<<<<< HEAD
       <form onSubmit={this.handleSubmit}>
         {/* <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input> */}
+=======
+      <div class = "ui centered equal width grid">
+      <Form onSubmit = {this.handleSubmit}>
+        <div class="column">
+        <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input>
+        </div>
+        <div class="column">
+>>>>>>> York_Style
         <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
+        </div>
+        <div class="column">
         <input type='submit' />
-      </form>
+        </div>
+      </Form>
+      </div>
     )
   }
 }

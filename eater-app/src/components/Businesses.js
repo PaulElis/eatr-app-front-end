@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BusinessCard from './BusinessCard'
+import { Grid } from 'semantic-ui-react'
 
 class Businesses extends React.Component {
 
@@ -14,10 +15,11 @@ class Businesses extends React.Component {
     )
 
     return(
-      <div>
-        <b>Businesses:</b>
+    <Grid divided='vertically'>
+    <Grid.Row columns={3}>
         {businesses}
-      </div>
+    </Grid.Row>
+    </Grid>
     )
   }
 }
