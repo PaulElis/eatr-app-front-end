@@ -9,7 +9,7 @@ const Review = ({currentUser, review, deleteReview}) => {
 
 	return (
 		<li>
-			{currentUser.username} says: {review.text}
+			{review.user_id} says: {review.text}
 			<button onClick={handleDelete} >DELETE</button>
 		</li>
 	)

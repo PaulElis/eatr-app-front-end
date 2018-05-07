@@ -7,7 +7,7 @@ import BusinessDetails from './BusinessDetails'
 class BusinessCard extends React.Component {
 
   state = {
-    reviews: []
+    reviews: this.props.business.reviews
   }
 
   addReview = (userId, text, businessId) => {
@@ -16,6 +16,15 @@ class BusinessCard extends React.Component {
     })
     this.callFetch(userId, text, businessId)
   }
+
+  // componentDidMount(){
+  //   fetch('http://localhost:3000/api/v1/reviews')
+  //     .then(response => response.json())
+  //     .then(reviews => this.setState({
+  //       reviews: reviews
+  //     })
+  //   )
+  // }
 
   callFetch = (user_id, text, business_id) => {
     fetch("http://localhost:3000/api/v1/reviews",
