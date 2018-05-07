@@ -1,14 +1,13 @@
 import React from 'react'
 
-// import EachFavorite from '../components/EachFavorite';
-import BusinessDetails from '../components/BusinessDetails';
+import BusinessCard from '../components/BusinessCard';
 
 class Favorites extends React.Component {
 
 
   render(){
     const favorites = this.props.favorites.map((business, index) =>
-      <BusinessDetails business={business} businesses={this.props.businesses} image={business.image} key={index} removeFromFavorites={this.props.removeFromFavorites}/>)
+      <BusinessCard business={business} businesses={this.props.businesses} favorites={this.props.favorites} image={business.image} key={index} removeFromFavorites={this.props.removeFromFavorites}/>)
 
     return(
       <div>

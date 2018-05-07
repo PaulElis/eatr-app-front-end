@@ -30,7 +30,7 @@ class BusinessCard extends React.Component {
 
     return(
       <div>
-        <BusinessDetails business={this.props.business} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} image={this.props.business.image}/>
+        <BusinessDetails business={this.props.business} favorites={this.props.favorites} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} removeFromFavorites={this.props.removeFromFavorites} image={this.props.business.image}/>
         <ReviewsList reviews={this.state.reviews} deleteReview={this.deleteReview}/>
         <NewReviewForm addReview={this.addReview} deleteReview={this.deleteReview}/>
       </div>

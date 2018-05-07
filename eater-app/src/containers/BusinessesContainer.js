@@ -26,14 +26,6 @@ class BusinessesContainer extends React.Component {
   }
 
   addToFavorites = (business) => {
-    // const business = this.state.businesses.find(business => business.id === parseInt(businessId))
-    // const foundBusiness = this.state.favorites.find(business => business.id === parseInt(businessId))
-    //   if(!foundBusiness){
-    //     this.setState({
-    //       favorites: [...this.state.favorites, business]
-    //     })
-    //   }
-
     if(!this.state.favorites.includes(business)){
       this.setState({
         favorites: [...this.state.favorites, business]
@@ -54,12 +46,12 @@ class BusinessesContainer extends React.Component {
 
   render(){
 
-    console.log(this.state.favorites);
+    console.log(this.state.businesses);
 
     return(
       <div>
         <Favorites favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
-        <Businesses businesses={this.state.businesses} addToFavorites={this.addToFavorites}/>
+        <Businesses businesses={this.state.businesses} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
     )
   }
