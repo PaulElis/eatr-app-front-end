@@ -2,6 +2,7 @@ import React from 'react'
 
 import NewCommentForm from './NewCommentForm'
 import CommentsList from './CommentsList'
+import BusinessDetails from './BusinessDetails'
 
 class BusinessCard extends React.Component {
 
@@ -29,12 +30,7 @@ class BusinessCard extends React.Component {
 
     return(
       <div>
-          <ul>
-            <img src={this.props.image} alt={this.props.index} width='190' height='150' />
-            <li>{this.props.business.name}</li>
-            <li>{this.props.business.address}, {this.props.business.city}</li>
-            <li>{this.props.business.state} {this.props.business.zip_code}</li>
-          </ul>
+        <BusinessDetails business={this.props.business} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} image={this.props.business.image}/>
         <CommentsList comments={this.state.comments} deleteComment={this.deleteComment}/>
         <NewCommentForm addComment={this.addComment} deleteComment={this.deleteComment}/>
       </div>
