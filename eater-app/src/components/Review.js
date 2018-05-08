@@ -3,9 +3,9 @@ import React from 'react'
 
 const Review = ({currentUser, review, deleteReview}) => {
 
-	const handleDelete = (event) => {
-		deleteReview(review)
-	}
+	// const handleDelete = (event) => {
+	// 	deleteReview(review)
+	// }
 
 	return (
 		<li>

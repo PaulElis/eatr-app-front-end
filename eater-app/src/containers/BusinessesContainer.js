@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Businesses from '../components/Businesses'
-import Favorites from '../components/Favorites'
 import NavBar from './NavBar'
 
 const URL = 'http://localhost:3000/api/v1/businesses'
@@ -13,30 +12,24 @@ class BusinessesContainer extends React.Component {
     favorites: []
   }
 
-  componentWillReceiveProps(searchTerm, location){
-    fetch(URL, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST",
-      body: JSON.stringify({search: searchTerm, location: location})
-    })
-      .then(response => response.json())
-      .then(json => this.setState({
-        businesses: json.results
+  componentWillReceiveProps(nextProps, nextState){
+    const searchTerm = nextProps.searchTerm
+    const location = nextProps.location
+    if(searchTerm && location){
+      fetch(URL, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify({search: searchTerm, location: location})
       })
-    )
-  }
-
-  fetchSearch = (searchTerm, location) => {
-    console.log('in fetchSearch');
-    fetch(searchTerm, location)
-      .then(response => response.json())
-      .then(businesses => this.setState({
-          businesses: businesses
-      })
-    )
+        .then(response => response.json())
+        .then(json => this.setState({
+          businesses: json.results
+        })
+      )
+    }
   }
 
   fetchBusinesses = () => {
@@ -77,8 +70,7 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        <NavBar currentUser={this.props.currentUser} runSearch={this.props.runSearch}/>
-        <Favorites favorites={this.state.favorites} currentUser={this.props.currentUser} removeFromFavorites={this.removeFromFavorites}/>
+        <NavBar currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser} runSearch={this.props.runSearch} favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
         <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
     )
