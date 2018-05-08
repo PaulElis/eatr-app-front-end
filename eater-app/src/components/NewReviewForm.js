@@ -1,4 +1,6 @@
 import React from 'react'
+import BusinessCard from './BusinessCard'
+import BusinessDetails from './BusinessDetails'
 import {Input, Button, Form} from 'semantic-ui-react'
 
 
@@ -26,14 +28,11 @@ class NewReviewForm extends React.Component {
   render(){
 
     return(
-      <div class = "ui centered equal width grid">
+      <div>
       <Form onSubmit = {this.handleSubmit}>
-        <div class="column">
-          <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
-        </div>
-        <div class="column">
-          <input type='submit' />
-        </div>
+
+        <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
+        <input type='submit' />
       </Form>
       </div>
     )
