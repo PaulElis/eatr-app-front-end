@@ -2,6 +2,7 @@ import React from 'react'
 
 import Businesses from '../components/Businesses'
 import Favorites from '../components/Favorites'
+import NavBar from './NavBar'
 
 const URL = 'http://localhost:3000/api/v1/businesses'
 
@@ -29,6 +30,7 @@ class BusinessesContainer extends React.Component {
   }
 
   fetchSearch = (searchTerm, location) => {
+    console.log('in fetchSearch');
     fetch(searchTerm, location)
       .then(response => response.json())
       .then(businesses => this.setState({
@@ -41,7 +43,7 @@ class BusinessesContainer extends React.Component {
     fetch(URL)
       .then(response => response.json())
       .then(businesses => this.setState({
-          businesses: businesses
+          businesses: businesses.slice(0, 21)
       })
     )
   }
@@ -75,6 +77,7 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
+        <NavBar currentUser={this.props.currentUser} runSearch={this.props.runSearch}/>
         <Favorites favorites={this.state.favorites} currentUser={this.props.currentUser} removeFromFavorites={this.removeFromFavorites}/>
         <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
