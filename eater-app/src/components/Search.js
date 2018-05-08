@@ -29,8 +29,8 @@ class Search extends React.Component {
     return(
       <div>
         <form onSubmit = {this.handleSubmit}>
-          <input name="searchTerm" placeholder="Find" value={this.state.searchTerm} onChange={this.handleChange}></input>
-          <input name="location" placeholder="Near" value={this.state.location} onChange={this.handleChange}></input>
+          <input name="searchTerm" placeholder="Find restaurants, bars..." value={this.state.searchTerm} onChange={this.handleChange}></input>
+          <input name="location" placeholder="Near New York, NY" value={this.state.location} onChange={this.handleChange}></input>
           <input type='submit' />
         </form>
       </div>

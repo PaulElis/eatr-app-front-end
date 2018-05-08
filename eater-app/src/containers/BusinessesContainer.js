@@ -12,17 +12,32 @@ class BusinessesContainer extends React.Component {
     favorites: []
   }
 
-  // if(this.props.searchTerm && this.props.location) {
-  //   searchTerm = this.props.searchTerm
-  //   location = this.props.location
-  //   fetchSearch(searchTerm, location)
-  // }
-
-  fetchSearch = (searchTerm, location) => {
-    console.log(searchTerm, location);
+  componentWillReceiveProps(searchTerm, location){
+    fetch(URL, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify({search: searchTerm, location: location})
+    })
+      .then(response => response.json())
+      .then(json => this.setState({
+        businesses: json.results
+      })
+    )
   }
 
-  fetch = () => {
+  fetchSearch = (searchTerm, location) => {
+    fetch(searchTerm, location)
+      .then(response => response.json())
+      .then(businesses => this.setState({
+          businesses: businesses
+      })
+    )
+  }
+
+  fetchBusinesses = () => {
     fetch(URL)
       .then(response => response.json())
       .then(businesses => this.setState({
@@ -32,7 +47,7 @@ class BusinessesContainer extends React.Component {
   }
 
   componentDidMount(){
-    this.fetch()
+    this.fetchBusinesses()
   }
 
   addToFavorites = (business) => {
@@ -56,7 +71,7 @@ class BusinessesContainer extends React.Component {
 
   render(){
 
-    // console.log(this.state.businesses);
+    console.log(this.state.businesses);
 
     return(
       <div>

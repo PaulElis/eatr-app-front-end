@@ -29,13 +29,10 @@ class NewReviewForm extends React.Component {
       <div class = "ui centered equal width grid">
       <Form onSubmit = {this.handleSubmit}>
         <div class="column">
-        <input name="name" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}></input>
+          <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
         </div>
         <div class="column">
-        <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
-        </div>
-        <div class="column">
-        <input type='submit' />
+          <input type='submit' />
         </div>
       </Form>
       </div>
