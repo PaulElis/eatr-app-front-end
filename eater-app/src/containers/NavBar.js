@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Search from '../components/Search'
+
 class NavBar extends React.Component {
 
 
@@ -10,6 +12,7 @@ class NavBar extends React.Component {
     return(
       <div>
         <b>NavBar / Current User: {this.props.currentUser.username}</b>
+        <Search runSearch={this.props.runSearch}/>
       </div>
     )
   }

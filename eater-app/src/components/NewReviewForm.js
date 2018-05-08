@@ -1,5 +1,6 @@
 import React from 'react'
-// import {Input, Button, Form} from 'semantic-ui-react'
+import {Input, Button, Form} from 'semantic-ui-react'
+
 
 class NewReviewForm extends React.Component {
 

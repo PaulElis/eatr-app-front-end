@@ -12,6 +12,16 @@ class BusinessesContainer extends React.Component {
     favorites: []
   }
 
+  // if(this.props.searchTerm && this.props.location) {
+  //   searchTerm = this.props.searchTerm
+  //   location = this.props.location
+  //   fetchSearch(searchTerm, location)
+  // }
+
+  fetchSearch = (searchTerm, location) => {
+    console.log(searchTerm, location);
+  }
+
   fetch = () => {
     fetch(URL)
       .then(response => response.json())
