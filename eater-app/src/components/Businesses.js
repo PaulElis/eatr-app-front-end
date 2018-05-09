@@ -1,7 +1,7 @@
 import React from 'react'
 
 import BusinessCard from './BusinessCard'
-import { Grid, Card } from 'semantic-ui-react'
+import {Grid} from 'semantic-ui-react'
 
 
 class Businesses extends React.Component {
