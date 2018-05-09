@@ -1,5 +1,6 @@
 import React from 'react'
 import Review from '../components/Review'
+import '../styles/ReviewsList.css'
 
 
 const ReviewsList = (props) => {
@@ -17,7 +18,7 @@ const ReviewsList = (props) => {
   })
 
   return (
-    <div>
+    <div class='ReviewsList'>
       {/* { ifReviews() } */}
       {reviews}
     </div>
