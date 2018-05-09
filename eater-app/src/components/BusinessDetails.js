@@ -1,7 +1,7 @@
 import React from 'react'
 import NewReviewForm from './NewReviewForm'
 import ReviewsList from './ReviewsList'
-
+import '../styles/BusinessDetails.css'
 
 import {Grid, Card, Icon, Image, Button, Dimmer, Header, Form} from 'semantic-ui-react';
 
@@ -21,18 +21,25 @@ class BusinessDetails extends React.Component {
     }
 	}
 
+  ifFavorite = () => {
+    if(!this.props.favorites.includes(this.props.business)){
+      return <Header as='h2' inverted> Click to add to Favorites! </Header>
+    } else {
+      return <Header as='h2' inverted> Click to remove from Favorites! </Header>
+    }
+  }
+
   render() {
 
     const { active } = this.state
     const content = (
       <div>
-        <Header as='h2' inverted> Click to add to Favorites! </Header>
-
+        {this.ifFavorite()}
       </div>
     )
 return (
       <div class="ui max width centered raised link cards">
-      <div class="card">
+      <div class="card" style={{height: '10 rem'}}>
         <Dimmer.Dimmable
           as={Image}
           dimmed={active}
@@ -53,7 +60,8 @@ return (
             <div class="description">
             {this.props.business.address}<br />
             {this.props.business.city}, {this.props.business.state} {this.props.business.zip_code}
-            <NewReviewForm business={this.props.business} addReview={this.addReview} deleteReview={this.deleteReview}/>
+            <ReviewsList reviews={this.props.reviews} deleteReview={this.props.deleteReview}/>
+            <NewReviewForm currentUser={this.props.currentUser} business={this.props.business} addReview={this.props.addReview} deleteReview={this.deleteReview}/>
             </div>
           </div>
         <div class="extra content">

@@ -1,6 +1,5 @@
 import React from 'react'
-import BusinessCard from './BusinessCard'
-import BusinessDetails from './BusinessDetails'
+
 import {Input, Button, Form} from 'semantic-ui-react'
 
 
@@ -12,6 +11,7 @@ class NewReviewForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
+    console.log(this.props);
     this.props.addReview(this.props.currentUser.id, this.state.text, this.props.business.id)
       this.setState({
         text: ""
@@ -30,7 +30,6 @@ class NewReviewForm extends React.Component {
     return(
       <div>
       <Form onSubmit = {this.handleSubmit}>
-
         <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
         <input type='submit' />
       </Form>
