@@ -33,7 +33,7 @@ class BusinessDetails extends React.Component {
 
     const { active } = this.state
     const content = (
-      <div>
+      <div class="right floated header">
         <i class="big heart icon"></i>
       </div>
     )
