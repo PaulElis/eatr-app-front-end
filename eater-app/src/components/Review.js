@@ -7,11 +7,14 @@ const Review = ({currentUser, review, deleteReview}) => {
 	// 	deleteReview(review)
 	// }
 
+
 	return (
-		<li>
-			{review.user_id} says: {review.text}
-			{/* <button onClick={handleDelete} >DELETE</button> */}
-		</li>
+		<ul>
+			<li>
+					{review.text}
+					{/* <button onClick={handleDelete} >DELETE</button> */}
+			</li>
+		</ul>
 	)
 }
 

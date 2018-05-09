@@ -1,7 +1,5 @@
 import React from 'react'
 
-import NewReviewForm from './NewReviewForm'
-import ReviewsList from './ReviewsList'
 import BusinessDetails from './BusinessDetails'
 import { Grid } from 'semantic-ui-react'
 
@@ -48,8 +46,7 @@ class BusinessCard extends React.Component {
     return(
       <Grid.Column>
         <div>
-        <BusinessDetails business={this.props.business} favorites={this.props.favorites} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} removeFromFavorites={this.props.removeFromFavorites} image={this.props.business.image}/>
-        <ReviewsList reviews={this.state.reviews} deleteReview={this.deleteReview}/>
+        <BusinessDetails reviews={this.state.reviews} deleteReview={this.deleteReview} addReview={this.addReview} currentUser={this.props.currentUser} business={this.props.business} favorites={this.props.favorites} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} removeFromFavorites={this.props.removeFromFavorites} image={this.props.business.image}/>
       </div>
       </Grid.Column>
     )
