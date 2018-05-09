@@ -66,7 +66,7 @@ class BusinessesContainer extends React.Component {
 
   render(){
 
-    console.log(this.state.businesses);
+    // console.log(this.state.businesses);
 
     return(
       <div>
