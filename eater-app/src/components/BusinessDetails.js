@@ -3,7 +3,7 @@ import NewReviewForm from './NewReviewForm'
 import ReviewsList from './ReviewsList'
 import '../styles/BusinessDetails.css'
 
-import {Grid, Card, Icon, Image, Button, Dimmer, Header, Form} from 'semantic-ui-react';
+import {Image, Dimmer, Header} from 'semantic-ui-react';
 
 class BusinessDetails extends React.Component {
   state = {}
@@ -34,7 +34,7 @@ class BusinessDetails extends React.Component {
     const { active } = this.state
     const content = (
       <div>
-        {this.ifFavorite()}
+        <i class="big heart icon"></i>
       </div>
     )
 return (
