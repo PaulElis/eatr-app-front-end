@@ -32,7 +32,7 @@ class App extends Component {
       <main>
       <div className="App">
         <header>
-          <h1><b> {this.state.currentUser.username ? `Eatr App welcomes ${this.state.currentUser.username}` : 'Eatr App'}</b></h1>
+          <h1><b> {this.state.currentUser.username ? `Eatr` : 'Eatr'}</b></h1>
         </header>
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
       </div>

@@ -10,9 +10,9 @@ class BusinessCard extends React.Component {
   }
 
   addReview = (userId, text, businessId) => {
-    this.setState({
-      reviews: [...this.state.reviews, {userId, text, businessId}]
-    })
+    // this.setState({
+    //   reviews: [...this.state.reviews, {userId, text, businessId}]
+    // })
     this.callFetch(userId, text, businessId)
   }
 
@@ -27,7 +27,10 @@ class BusinessCard extends React.Component {
           body: JSON.stringify({user_id: user_id, text: text, business_id: business_id})
       })
       .then(r => r.json())
-      .then(data => {console.log(data)})
+      .then(newReview => this.setState({
+        reviews: [...this.state.reviews, newReview]
+      })
+    )
   }
 
   deleteReview = (comment) => {
@@ -41,7 +44,7 @@ class BusinessCard extends React.Component {
   }
 
   render(){
-    // console.log(this.state.reviews);
+    console.log(this.state.reviews);
 
     return(
       <Grid.Column>

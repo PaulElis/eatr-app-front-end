@@ -7,23 +7,20 @@ const Review = ({business, currentUser, review, deleteReview}) => {
 	// 	deleteReview(review)
 	// }
 
-	const ifReview = () => {
-		if(business.reviews) {
-			return business.reviews.map((eachReview) => {
-				return <li> {eachReview.text} </li>
-			})
-		} else {
-			return null
-		}
-	}
-
+	// const ifReview = () => {
+	// 	if(business.reviews) {
+	// 		return business.reviews.map((eachReview) => {
+	// 			return <li> {eachReview.text} </li>
+	// 		})
+	// 	} else {
+	// 		return null
+	// 	}
+	// }
 
 	return (
-		<div>
-			<ul>
-					{ ifReview() }
-			</ul>
-		</div>
+					<div>
+						{review.text}
+					</div>
 	)
 }
 
