@@ -60,7 +60,7 @@ return (
             <div class="description">
             {this.props.business.address}<br />
             {this.props.business.city}, {this.props.business.state} {this.props.business.zip_code}
-            <ReviewsList reviews={this.props.reviews} deleteReview={this.props.deleteReview}/>
+            <ReviewsList business={this.props.business} reviews={this.props.reviews} deleteReview={this.props.deleteReview}/>
             <NewReviewForm currentUser={this.props.currentUser} business={this.props.business} addReview={this.props.addReview} deleteReview={this.deleteReview}/>
             </div>
           </div>

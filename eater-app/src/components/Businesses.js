@@ -10,7 +10,7 @@ class Businesses extends React.Component {
 
   render(){
 
-    console.log(this.props.businesses);
+    // console.log(this.props.businesses);
 
     const businesses = this.props.businesses.map((business, index) => {
       return <BusinessCard business={business} currentUser={this.props.currentUser} favorites={this.props.favorites} index={index} key={index} image={business.image} addToFavorites={this.props.addToFavorites} />
