@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Card } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
 import BusinessCard from '../components/BusinessCard';
 
@@ -12,7 +12,7 @@ class Favorites extends React.Component {
 
     return(
       <Grid divided='vertically'>
-          <h3>My Favorites</h3>
+          <h3></h3>
         <Grid.Row columns={3}>
             {favorites}
         </Grid.Row>

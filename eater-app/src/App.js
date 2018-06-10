@@ -18,10 +18,9 @@ class App extends Component {
     })
   }
 
-  runSearch = (searchTerm, location) => {
+  runSearch = (searchTerm) => {
     this.setState({
       searchTerm: searchTerm,
-      location: location,
       searchRan: true
     })
   }
@@ -32,7 +31,7 @@ class App extends Component {
       <main>
       <div className="App">
         <header>
-          <h1><b> {this.state.currentUser.username ? `Eatr` : 'Eatr'}</b></h1>
+          <p id='home-header'><b> {this.state.currentUser.username ? `Eatr` : 'Eatr'}</b></p>
         </header>
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
       </div>

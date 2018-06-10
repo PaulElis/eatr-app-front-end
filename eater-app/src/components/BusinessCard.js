@@ -44,13 +44,13 @@ class BusinessCard extends React.Component {
   }
 
   render(){
-    console.log(this.state.reviews);
+    // console.log(this.state.reviews);
 
     return(
       <Grid.Column>
         <div>
-        <BusinessDetails reviews={this.state.reviews} deleteReview={this.deleteReview} addReview={this.addReview} currentUser={this.props.currentUser} business={this.props.business} favorites={this.props.favorites} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} removeFromFavorites={this.props.removeFromFavorites} image={this.props.business.image}/>
-      </div>
+          <BusinessDetails reviews={this.state.reviews} deleteReview={this.deleteReview} addReview={this.addReview} currentUser={this.props.currentUser} business={this.props.business} favorites={this.props.favorites} index={this.props.index} key={this.props.index} addToFavorites={this.props.addToFavorites} removeFromFavorites={this.props.removeFromFavorites} image={this.props.business.image}/>
+        </div>
       </Grid.Column>
     )
   }

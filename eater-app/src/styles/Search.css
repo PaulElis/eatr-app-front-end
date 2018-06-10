@@ -1,0 +1,26 @@
+#search-header {
+  padding-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+#form {
+  padding: 0px;
+  margin: 0px;
+  /* margin-bottom: 0px; */
+}
+
+input {
+  padding: 0px;
+  margin: 0px;
+}
+
+#input {
+  /* padding-bottom: 0px; */
+  /* margin-bottom: 0px; */
+}
+
+#search-button {
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 2px;
+}

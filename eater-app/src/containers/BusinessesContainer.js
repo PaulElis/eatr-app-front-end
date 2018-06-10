@@ -14,15 +14,15 @@ class BusinessesContainer extends React.Component {
 
   componentWillReceiveProps(nextProps, nextState){
     const searchTerm = nextProps.searchTerm
-    const location = nextProps.location
-    if(searchTerm && location){
+    // const location = nextProps.location
+    if(searchTerm){
       fetch(URL, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         method: "POST",
-        body: JSON.stringify({search: searchTerm, location: location})
+        body: JSON.stringify({search: searchTerm})
       })
         .then(response => response.json())
         .then(json => this.setState({

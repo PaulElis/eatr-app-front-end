@@ -1,5 +1,6 @@
 import React from 'react'
 
+import '../styles/Users.css'
 import NewUserForm from '../components/NewUserForm'
 
 class Users extends React.Component {
@@ -38,8 +39,10 @@ class Users extends React.Component {
 
     return(
       <div>
-        <b>Login/Register</b>
-        <NewUserForm createUser={this.createUser} currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser}/>
+        <div id='login-register'>
+          <b>Login/Register</b>
+        </div>
+          <NewUserForm createUser={this.createUser} currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser}/>
       </div>
     )
   }

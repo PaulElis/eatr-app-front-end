@@ -13,12 +13,12 @@ const ReviewsList = (props) => {
   //   }
   // }
 
-  const reviews = props.reviews.map((review, index) => {
+  const reviews = props.reviews ? props.reviews.map((review, index) => {
     return <Review key={index} currentUser={props.currentUser} business={props.business} review={review} deleteReview={props.deleteReview} />
-  })
+  }) : null
 
   return (
-    <div class='ReviewsList'>
+    <div className='ReviewsList'>
       {/* { ifReviews() } */}
       {reviews}
     </div>

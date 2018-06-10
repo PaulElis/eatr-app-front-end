@@ -1,7 +1,38 @@
 div.card {
-  height: 33rem;
+  height: 35rem;
 }
 
 div.ui.medium.image.dimmable img {
   height: 15rem;
+}
+
+#card {
+  /* font-size: 20px; */
+  /* background-color: #eeeee0; */
+  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
+}
+
+#header {
+  /* font-size: 20px; */
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 3px;
+}
+
+#meta {
+  /* font-size: 20px; */
+  font-family: 'Marcellus SC', serif;
+}
+
+#description {
+  color: black;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 1px;
+}
+
+#extra-content {
+  color: black;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 2px;
+  /* background-color: #eeeee0; */
+  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
 }

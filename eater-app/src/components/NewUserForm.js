@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Button, Form } from 'semantic-ui-react'
 
 class NewUserForm extends React.Component {
 
@@ -25,10 +25,10 @@ class NewUserForm extends React.Component {
   render(){
 
     return(
-      <form onSubmit={this.handleSubmit}>
-        <input name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}></input>
-        <input type='submit' />
-      </form>
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Input icon='users' iconPosition='left' size='mini' name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}></Form.Input>
+        <Button id='login-register-button' color='grey' fluid compact size='mini' type='submit'>Done</Button>
+      </Form>
     )
   }
 }

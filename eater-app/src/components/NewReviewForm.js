@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Form} from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 
 class NewReviewForm extends React.Component {
@@ -30,8 +30,8 @@ class NewReviewForm extends React.Component {
     return(
       <div>
       <Form onSubmit = {this.handleSubmit}>
-        <input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></input>
-        <input type='submit' />
+        <Form.Input name="text" placeholder="Enter Review" value={this.state.text} onChange={this.handleChange}></Form.Input>
+        <Button id='review-button' color='blue' compact fluid size='mini' type='submit'>Submit</Button>
       </Form>
       </div>
     )
