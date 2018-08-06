@@ -1,9 +1,14 @@
 div.card {
-  height: 35rem;
+  height: 50rem;
+  width: 80rem;
 }
 
-div.ui.medium.image.dimmable img {
+/* div.ui.medium.image.dimmable img {
   height: 15rem;
+} */
+
+div.business-image img{
+  height: 30rem;
 }
 
 #card {

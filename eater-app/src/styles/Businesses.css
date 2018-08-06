@@ -14,7 +14,8 @@
 
 #grid {
   background-size: contain;
-  background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg');
-  background-color: #A6B170;
+  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
+  /* background-color: #A6B170; */
+  background-color: white;
   color: white;
 }
