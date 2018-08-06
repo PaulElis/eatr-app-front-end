@@ -12,7 +12,6 @@ class Favorites extends React.Component {
 
     return(
       <Grid divided='vertically'>
-          <h3></h3>
         <Grid.Row columns={3}>
             {favorites}
         </Grid.Row>

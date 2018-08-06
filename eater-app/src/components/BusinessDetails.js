@@ -1,9 +1,9 @@
 import React from 'react'
-import NewReviewForm from './NewReviewForm'
-import ReviewsList from './ReviewsList'
+// import NewReviewForm from './NewReviewForm'
+// import ReviewsList from './ReviewsList'
 import '../styles/BusinessDetails.css'
 
-import {Image, Dimmer, Header, Card, Icon} from 'semantic-ui-react';
+import {Image, Card, Icon} from 'semantic-ui-react';
 
 class BusinessDetails extends React.Component {
   state = {}
@@ -12,31 +12,31 @@ class BusinessDetails extends React.Component {
   handleHide = () => this.setState({ active: false })
 
 
-  handleClick = (event) => {
-    console.log(this.props.favorites)
-    if(!this.props.favorites.includes(this.props.business)){
-      this.props.addToFavorites(this.props.business)
-    } else if (this.props.removeFromFavorites) {
-      this.props.removeFromFavorites(this.props.business)
-    }
-	}
+  // handleClick = (event) => {
+  //   console.log(this.props.favorites)
+  //   if(!this.props.favorites.includes(this.props.business)){
+  //     this.props.addToFavorites(this.props.business)
+  //   } else if (this.props.removeFromFavorites) {
+  //     this.props.removeFromFavorites(this.props.business)
+  //   }
+	// }
 
-  ifFavorite = () => {
-    if(!this.props.favorites.includes(this.props.business)){
-      return <Header as='h2' inverted> Click to add to Favorites! </Header>
-    } else {
-      return <Header as='h2' inverted> Click to remove from Favorites! </Header>
-    }
-  }
+  // ifFavorite = () => {
+  //   if(!this.props.favorites.includes(this.props.business)){
+  //     return <Header as='h2' inverted> Click to add to Favorites! </Header>
+  //   } else {
+  //     return <Header as='h2' inverted> Click to remove from Favorites! </Header>
+  //   }
+  // }
 
   render() {
 
-    const { active } = this.state
-    const content = (
-      <div className="right floated header">
-        <i className="big heart icon"></i>
-      </div>
-    )
+    // const { active } = this.state
+    // const content = (
+    //   <div className="right floated header">
+    //     <i className="big heart icon"></i>
+    //   </div>
+    // )
 return (
       // <div className="ui max width centered raised link cards">
       // <div className="card" style={{height: '10 rem'}}>
@@ -75,9 +75,10 @@ return (
       // </div>
       // </div>
       <Card.Group centered>
-      <Card color='red'>
+      <Card fluid color='red'>
+        <br></br>
         <div className='business-image'>
-          <Image src={this.props.image} />
+          <Image centered src={this.props.image} />
         </div>
         <Card.Content>
           <Card.Header>
