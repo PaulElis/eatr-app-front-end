@@ -20,16 +20,10 @@ class NavBar extends React.Component {
   render(){
 
     return(
+      // <a className="item" id='item'><Favorites favorites={this.props.favorites} currentUser={this.props.currentUser} removeFromFavorites={this.props.removeFromFavorites}/></a>
 
       <div className="ui two item menu" id='NavBar'>
         <a className="item" id='item'><Search runSearch={this.props.runSearch}/></a>
-        {/* <a className="item" id='item'><Favorites favorites={this.props.favorites} currentUser={this.props.currentUser} removeFromFavorites={this.props.removeFromFavorites}/></a> */}
-
-        {/* <a className="item" id='item'><Users currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser}/></a> */}
-
-        {/* <a className="item" id='item'>Current User: {this.props.currentUser.username}</a> */}
-        {/* <a className="item" id='current-user'> {this.ifCurrentUser()} </a> */}
-
         <a className="item" id='current-user'>
           {this.props.currentUser.username ?
             this.props.currentUser.username :

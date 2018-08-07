@@ -27,7 +27,7 @@ class NewUserForm extends React.Component {
     return(
       <Form onSubmit={this.handleSubmit}>
         <Form.Input icon='users' iconPosition='left' size='mini' name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}></Form.Input>
-        <Button id='login-register-button' color='grey' fluid compact size='mini' type='submit'>Done</Button>
+        <Button id='login-register-button' color='grey' fluid compact size='mini' type='submit'>Sign On</Button>
       </Form>
     )
   }

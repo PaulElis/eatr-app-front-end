@@ -29,13 +29,12 @@ class Search extends React.Component {
 
     return(
       <div>
-        <div id='search-header'>
+        {/* <div id='search-header'>
           Search
-        </div>
+        </div> */}
         <Form id='form' onSubmit = {this.handleSubmit}>
           <Form.Input icon='search' id='input' size='mini' name="searchTerm" placeholder="Find restaurants, bars..." value={this.state.searchTerm} onChange={this.handleChange}></Form.Input>
-          {/* <Form.Input icon='search' id='input' size='mini' name="location" placeholder="Near New York, NY" value={this.state.location} onChange={this.handleChange}></Form.Input> */}
-          <Button id='search-button' color='grey' compact fluid size='mini' type='submit'>Done </Button>
+          <Button id='search-button' color='grey' compact fluid size='mini' type='submit'>Search</Button>
         </Form>
       </div>
     )

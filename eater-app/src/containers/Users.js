@@ -40,7 +40,7 @@ class Users extends React.Component {
     return(
       <div>
         <div id='login-register'>
-          <b>Login/Register</b>
+          {/* <b>Login/Register</b> */}
         </div>
           <NewUserForm createUser={this.createUser} currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser}/>
       </div>

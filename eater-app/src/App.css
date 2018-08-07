@@ -5,7 +5,7 @@
   font-size: 50px;
   font-family: 'Marcellus SC', serif;
   letter-spacing: 7px;
-  text-shadow: black 0.1em 0.1em 0.2em;
+  /* text-shadow: black 0.1em 0.1em 0.2em; */
 }
 
 .App {
