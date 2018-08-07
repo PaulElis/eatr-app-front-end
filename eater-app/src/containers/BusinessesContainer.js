@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Businesses from '../components/Businesses'
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 
 const URL = 'http://localhost:3000/api/v1/businesses'
 

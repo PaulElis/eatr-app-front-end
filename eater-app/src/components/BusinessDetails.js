@@ -98,7 +98,7 @@ return (
                 {this.props.business.review_count} Reviews
             </span>
             <span className="right floated">
-              <Icon name='star outline' />
+              <Icon name='star' />
                  Rating {this.props.business.rating} / 5
             </span>
         </Card.Content>

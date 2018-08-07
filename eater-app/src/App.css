@@ -1,6 +1,6 @@
 #home-header {
   color: white;
-  font-size: 50px;
+  font-size: 80px;
   font-family: 'Marcellus SC', serif;
   letter-spacing: 7px;
   padding-bottom: 20px;
@@ -8,7 +8,16 @@
 
 div.app-header{
   background-color: #D22C2C;
-  padding: 15px;
+  /* padding: 0px 15px 15px 15px; */
+}
+
+#eatr-logo{
+  /* padding-left: 725px; */
+  padding-left: 43%;
+}
+
+#menu-right{
+  padding-left: 10%;
 }
 
 .App {

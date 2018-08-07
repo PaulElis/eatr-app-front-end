@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Input, Menu } from 'semantic-ui-react'
+import { Button, Form, Input, Menu } from 'semantic-ui-react'
 
 
 import BusinessesContainer from './containers/BusinessesContainer'
@@ -13,9 +13,11 @@ class App extends Component {
     searchTerm: "",
     location: "",
     username: "",
+    users: "",
   }
 
   handleSearchSubmit = event => {
+    console.log('inhandleSearchSubmit')
     event.preventDefault()
     this.props.runSearch(this.state.searchTerm)
       this.setState({
@@ -30,7 +32,7 @@ class App extends Component {
   }
 
   handleUserSubmit = event => {
-    console.log('in handleUserSubmit')
+    // console.log('in handleUserSubmit')
     event.preventDefault()
       this.setState({
         username: ""
@@ -51,7 +53,7 @@ class App extends Component {
   }
 
   createUser = (username) => {
-    console.log('in createUser')
+    // console.log('in createUser')
     this.setState({
       users: [...this.state.users, {username}]
     })
@@ -73,7 +75,7 @@ class App extends Component {
   }
 
   handleFetch = (user) => {
-    this.props.setCurrentUser(user)
+    this.setCurrentUser(user)
   }
 
 
@@ -85,30 +87,36 @@ class App extends Component {
   }
 
   render() {
-
+    // console.log('state', this.state)
     return (
       <main>
       <div className="App">
         <div className='app-header'>
         <header>
             <Menu secondary>
-                <Menu.Menu position='right'>
+                <div id='eatr-logo'>
+                <Menu.Menu position='left'>
                   <Menu.Item>
                     <p id='home-header'>
                       <b>Eatr</b>
                     </p>
                   </Menu.Item>
                 </Menu.Menu>
+                </div>
                 <Menu.Menu position='right'>
-                  <Menu.Item id='form' onSubmit={this.handleSearchSubmit}>
-                    <Input icon='search' id='input' size='medium' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Input>
+                  <Menu.Item onSubmit={this.handleSearchSubmit}>
+                    <Input icon='search' size='medium' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Input>
                     {/* <Button id='search-button' color='grey' compact fluid size='medium' type='submit'>Search</Button> */}
                   </Menu.Item>
                   {this.state.currentUser.username ?
                     this.state.currentUser.username :
-                  <Menu.Item id='form' onSubmit={this.handleUserSubmit}>
-                    <Input icon='users' id='input' iconPosition='left' size='medium' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange} />
-                    <Button id='login-register-button' color='blue' fluid compact size='medium' type='submit'>Sign On</Button>
+                  <Menu.Item>
+                    <Form onSubmit={this.handleUserSubmit}>
+                      <Form.Input icon='users' iconPosition='left' size='small' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
+                      <Button id='login-register-button' color='blue' fluid compact size='small' type='submit'>Sign In</Button>
+                    </Form>
+                    {/* <Input icon='users' iconPosition='left' size='medium' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange} />
+                    <Button id='login-register-button' color='blue' fluid compact size='medium' type='submit'>Sign On</Button> */}
                   </Menu.Item>}
                 </Menu.Menu>
             </Menu>
