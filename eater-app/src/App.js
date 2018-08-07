@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Form, Input, Menu } from 'semantic-ui-react'
+import { Form, Menu } from 'semantic-ui-react'
 
 
 import BusinessesContainer from './containers/BusinessesContainer'
+import Current from './components/Current'
 
 class App extends Component {
 
@@ -103,20 +104,26 @@ class App extends Component {
                   </Menu.Item>
                 </Menu.Menu>
                 </div>
-                <Menu.Menu position='right'>
-                  <Menu.Item onSubmit={this.handleSearchSubmit}>
-                    <Input icon='search' size='medium' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Input>
-                    {/* <Button id='search-button' color='grey' compact fluid size='medium' type='submit'>Search</Button> */}
+                <Menu.Menu position='right' id='menu-right'>
+                  <Menu.Item>
+                    <Form onSubmit={this.handleSearchSubmit}>
+                      <Form.Group>
+                        <Form.Input icon='search' size='small' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
+                      </Form.Group>
+                    </Form>
                   </Menu.Item>
                   {this.state.currentUser.username ?
-                    this.state.currentUser.username :
+                    <div>
+                      <Current currentUser={this.state.currentUser}/>
+                    </div>
+                    :
                   <Menu.Item>
                     <Form onSubmit={this.handleUserSubmit}>
-                      <Form.Input icon='users' iconPosition='left' size='small' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
-                      <Button id='login-register-button' color='blue' fluid compact size='small' type='submit'>Sign In</Button>
+                      <Form.Group>
+                        <Form.Input icon='users' iconPosition='left' size='small' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
+                        <Form.Button color='blue' content='Sign on' />
+                      </Form.Group>
                     </Form>
-                    {/* <Input icon='users' iconPosition='left' size='medium' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange} />
-                    <Button id='login-register-button' color='blue' fluid compact size='medium' type='submit'>Sign On</Button> */}
                   </Menu.Item>}
                 </Menu.Menu>
             </Menu>

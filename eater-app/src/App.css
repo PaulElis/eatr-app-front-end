@@ -3,7 +3,7 @@
   font-size: 80px;
   font-family: 'Marcellus SC', serif;
   letter-spacing: 7px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 div.app-header{
@@ -11,13 +11,21 @@ div.app-header{
   /* padding: 0px 15px 15px 15px; */
 }
 
+/* #current-user{
+  font-size: 40px;
+  font-family: 'Marcellus SC', serif;
+  color: white;
+  padding: 33px 30px 0px 30px;
+} */
+
 #eatr-logo{
   /* padding-left: 725px; */
-  padding-left: 43%;
+  /* padding-left: 43.5%; */
+  padding-left: 26%;
 }
 
 #menu-right{
-  padding-left: 10%;
+  padding-right: 2%;
 }
 
 .App {
