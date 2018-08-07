@@ -1,11 +1,14 @@
 #home-header {
   color: white;
-  /* background-color: #A6B170; */
-  background-color: #D22C2C;
   font-size: 50px;
   font-family: 'Marcellus SC', serif;
   letter-spacing: 7px;
-  /* text-shadow: black 0.1em 0.1em 0.2em; */
+  padding-bottom: 20px;
+}
+
+div.app-header{
+  background-color: #D22C2C;
+  padding: 15px;
 }
 
 .App {

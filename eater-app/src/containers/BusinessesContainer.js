@@ -70,7 +70,7 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        <NavBar currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser} runSearch={this.props.runSearch} favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
+        {/* <NavBar currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser} runSearch={this.props.runSearch} favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/> */}
         <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
     )

@@ -3,7 +3,7 @@ import React from 'react'
 
 import '../styles/NavBar.css'
 import Search from '../components/Search'
-import Favorites from '../components/Favorites'
+// import Favorites from '../components/Favorites'
 import Users from './Users'
 
 
