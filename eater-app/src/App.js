@@ -18,7 +18,6 @@ class App extends Component {
   }
 
   handleSearchSubmit = event => {
-    console.log('inhandleSearchSubmit')
     event.preventDefault()
     this.props.runSearch(this.state.searchTerm)
       this.setState({
@@ -33,7 +32,6 @@ class App extends Component {
   }
 
   handleUserSubmit = event => {
-    // console.log('in handleUserSubmit')
     event.preventDefault()
       this.setState({
         username: ""
@@ -54,7 +52,6 @@ class App extends Component {
   }
 
   createUser = (username) => {
-    // console.log('in createUser')
     this.setState({
       users: [...this.state.users, {username}]
     })
@@ -88,11 +85,10 @@ class App extends Component {
   }
 
   render() {
-    // console.log('state', this.state)
     return (
-      <main>
+      // <main>
       <div className="App">
-        <div className='app-header'>
+      <div className='app-header'>
         <header>
             <Menu secondary>
                 <div id='eatr-logo'>
@@ -106,7 +102,7 @@ class App extends Component {
                 </div>
                 <Menu.Menu position='right' id='menu-right'>
                   <Menu.Item>
-                    <Form onSubmit={this.handleSearchSubmit}>
+                    <Form>
                       <Form.Group>
                         <Form.Input icon='search' size='small' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
                       </Form.Group>
@@ -121,7 +117,7 @@ class App extends Component {
                     <Form onSubmit={this.handleUserSubmit}>
                       <Form.Group>
                         <Form.Input icon='users' iconPosition='left' size='small' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
-                        <Form.Button color='blue' content='Sign on' />
+                        <Form.Button color='blue' content='Sign in' />
                       </Form.Group>
                     </Form>
                   </Menu.Item>}
@@ -131,7 +127,7 @@ class App extends Component {
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
       </div>
       </div>
-      </main>
+      // </main>
     );
   }
 }
