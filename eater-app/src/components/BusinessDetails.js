@@ -8,8 +8,8 @@ import {Image, Card, Icon} from 'semantic-ui-react';
 class BusinessDetails extends React.Component {
   state = {}
 
-  handleShow = () => this.setState({ active: true })
-  handleHide = () => this.setState({ active: false })
+  // handleShow = () => this.setState({ active: true })
+  // handleHide = () => this.setState({ active: false })
 
 
   // handleClick = (event) => {
@@ -29,9 +29,15 @@ class BusinessDetails extends React.Component {
   //   }
   // }
 
+  starCount = () => {
+    console.log('in starCount')
+      return <div><Icon name='star' /></div>
+      // return <div>hi</div>
+  }
+
   render() {
 
-return (
+    return (
       <Card.Group centered>
       <Card fluid color='red'>
         <br></br>
@@ -56,8 +62,9 @@ return (
                 {this.props.business.review_count} Reviews
             </span>
             <span className="right floated">
-              <Icon name='star' />
-                 Rating {this.props.business.rating} / 5
+              {/* <Icon name='star' /> */}
+                 {/* Rating {this.props.business.rating} / 5 */}
+                   {this.starCount()}
             </span>
         </Card.Content>
       </Card>
