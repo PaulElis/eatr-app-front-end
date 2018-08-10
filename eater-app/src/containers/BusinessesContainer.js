@@ -3,7 +3,8 @@ import React from 'react'
 import Businesses from '../components/Businesses'
 // import NavBar from './NavBar'
 
-const URL = 'http://localhost:3000/api/v1/businesses'
+// const URL = 'http://localhost:3000/api/v1/businesses'
+const URL = 'https://eatr-back-end.herokuapp.com/api/v1/businesses'
 
 class BusinessesContainer extends React.Component {
 

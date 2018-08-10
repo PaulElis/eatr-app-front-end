@@ -17,7 +17,8 @@ class BusinessCard extends React.Component {
   }
 
   callFetch = (user_id, text, business_id) => {
-    fetch("http://localhost:3000/api/v1/reviews",
+    // fetch("http://localhost:3000/api/v1/reviews",
+    fetch("https://eatr-back-end.herokuapp.com/api/v1/reviews",
       {
           headers: {
             'Accept': 'application/json',

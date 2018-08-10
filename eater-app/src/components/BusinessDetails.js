@@ -29,11 +29,13 @@ class BusinessDetails extends React.Component {
   //   }
   // }
 
-  starCount = () => {
-    console.log('in starCount')
-      return <div><Icon name='star' /></div>
-      // return <div>hi</div>
-  }
+  // starCount = () => {
+  //   let count = this.props.business.rating
+  //   // return <Icon name='star' />.repeat(count);
+  //   count.split().forEach(function(i) {
+  //     <Icon name='star' />
+  //   })
+  // }
 
   render() {
 
@@ -62,9 +64,9 @@ class BusinessDetails extends React.Component {
                 {this.props.business.review_count} Reviews
             </span>
             <span className="right floated">
-              {/* <Icon name='star' /> */}
-                 {/* Rating {this.props.business.rating} / 5 */}
-                   {this.starCount()}
+              <Icon name='star' />
+                 Rating {this.props.business.rating} / 5
+                   {/* {this.starCount()} */}
             </span>
         </Card.Content>
       </Card>

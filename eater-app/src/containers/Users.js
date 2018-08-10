@@ -17,7 +17,8 @@ class Users extends React.Component {
   }
 
   callFetch = (username) => {
-    fetch("http://localhost:3000/api/v1/users",
+    // fetch("http://localhost:3000/api/v1/users",
+    fetch("https://eatr-back-end.herokuapp.com/api/v1/users",
       {
           headers: {
             'Accept': 'application/json',
