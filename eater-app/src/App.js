@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Form, Menu } from 'semantic-ui-react'
-
+import MediaQuery from 'react-responsive';
 
 import BusinessesContainer from './containers/BusinessesContainer'
 import Current from './components/Current'
@@ -87,10 +87,46 @@ class App extends Component {
 
   render() {
     return (
-      // <main>
       <div className="App">
       <div className='app-header'>
         <header>
+        <MediaQuery query="(orientation: portrait)" >
+            <Menu secondary>
+                <div id='eatr-logo'>
+                <Menu.Menu position='left'>
+                  <Menu.Item>
+                    <p id='home-header'>
+                      <b>Eatr</b>
+                    </p>
+                  </Menu.Item>
+                </Menu.Menu>
+                </div>
+                <Menu.Menu position='right' id='menu-right'>
+                  <Menu.Item>
+                    <Form>
+                      <Form.Group>
+                        <Form.Input icon='search' size='mini' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
+                      </Form.Group>
+                    </Form>
+                  </Menu.Item>
+                  {this.state.currentUser.username ?
+                    <div>
+                      <Current currentUser={this.state.currentUser}/>
+                    </div>
+                    :
+                  <Menu.Item>
+                    <Form onSubmit={this.handleUserSubmit}>
+                      <Form.Group>
+                        <Form.Input icon='users' iconPosition='left' size='mini' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
+                        <Form.Button color='blue' content='Sign in' />
+                      </Form.Group>
+                    </Form>
+                  </Menu.Item>}
+                </Menu.Menu>
+            </Menu>
+        </MediaQuery>
+
+        <MediaQuery query="(min-device-width: 1224px)">
             <Menu secondary>
                 <div id='eatr-logo'>
                 <Menu.Menu position='left'>
@@ -124,11 +160,11 @@ class App extends Component {
                   </Menu.Item>}
                 </Menu.Menu>
             </Menu>
+          </MediaQuery>
         </header>
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
       </div>
       </div>
-      // </main>
     );
   }
 }

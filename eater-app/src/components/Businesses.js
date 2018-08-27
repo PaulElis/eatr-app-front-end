@@ -1,4 +1,5 @@
 import React from 'react'
+import MediaQuery from 'react-responsive';
 
 import '../styles/Businesses.css'
 import BusinessCard from './BusinessCard'
@@ -19,9 +20,11 @@ class Businesses extends React.Component {
 
     return(
     <Grid divided='vertically' id='grid'>
-      <div id='businesses-header'>
-        {/* <p>Businesses</p> */}
-      </div>
+      <MediaQuery query="(orientation: portrait)">
+        <Grid.Row columns={1} id='businesses-container'>
+            {businesses}
+        </Grid.Row>
+      </MediaQuery>
       <Grid.Row columns={3} id='businesses-container'>
           {businesses}
       </Grid.Row>

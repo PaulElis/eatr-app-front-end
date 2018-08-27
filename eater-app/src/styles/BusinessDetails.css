@@ -1,30 +1,28 @@
+  /* Portrait iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
 div.card {
-  height: 45rem;
+  height: 35rem;
 }
 
-/* div.ui.medium.image.dimmable img {
-  height: 15rem;
-} */
+#card{
+  width: 22rem;
+}
 
 div.business-image img{
-  height: 31rem;
-  width: 31rem;
-}
-
-#card {
-  /* font-size: 20px; */
-  /* background-color: #eeeee0; */
-  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
+  height: 20rem;
+  width: 20rem;
 }
 
 #header {
-  /* font-size: 20px; */
   font-family: 'Marcellus SC', serif;
   letter-spacing: 3px;
 }
 
 #meta {
-  /* font-size: 20px; */
   font-family: 'Marcellus SC', serif;
 }
 
@@ -38,6 +36,43 @@ div.business-image img{
   color: black;
   font-family: 'Marcellus SC', serif;
   letter-spacing: 2px;
-  /* background-color: #eeeee0; */
-  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
+}
+}
+
+
+  /* For Web */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+div.card {
+  height: 45rem;
+}
+
+div.business-image img{
+  height: 31rem;
+  width: 31rem;
+}
+
+#header {
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 3px;
+}
+
+#meta {
+  font-family: 'Marcellus SC', serif;
+}
+
+#description {
+  color: black;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 1px;
+}
+
+#extra-content {
+  color: black;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 2px;
+}
 }

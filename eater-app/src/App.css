@@ -1,36 +1,72 @@
-#home-header {
-  color: white;
-  font-size: 80px;
-  font-family: 'Marcellus SC', serif;
-  letter-spacing: 7px;
-  padding-bottom: 18px;
+  /* Portrait iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+  #home-header {
+    color: white;
+    font-size: 20px;
+    font-family: 'Marcellus SC', serif;
+    letter-spacing: 7px;
+    /* padding-bottom: 18px; */
+  }
+
+  div.ui.secondary.menu{
+    padding-top: 0px;
+  }
+
+  div.app-header{
+    background-color: #D22C2C;
+  }
+
+  #eatr-logo{
+    /* padding-left: 2%; */
+  }
+
+  #menu-right{
+    padding-right: 2%;
+  }
 }
 
-div.ui.secondary.menu{
-  padding-top: 0px;
+/* For Web */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+  #home-header {
+    color: white;
+    font-size: 80px;
+    font-family: 'Marcellus SC', serif;
+    letter-spacing: 7px;
+    padding-bottom: 18px;
+  }
+
+  div.ui.secondary.menu{
+    padding-top: 0px;
+  }
+
+  div.app-header{
+    background-color: #D22C2C;
+  }
+
+  #eatr-logo{
+    padding-left: 27%;
+  }
+
+  #menu-right{
+    padding-right: 2%;
+  }
 }
 
-div.app-header{
-  background-color: #D22C2C;
-  /* padding: 0px 15px 15px 15px; */
-}
 
-/* #current-user{
-  font-size: 40px;
-  font-family: 'Marcellus SC', serif;
-  color: white;
-  padding: 33px 30px 0px 30px;
-} */
 
-#eatr-logo{
-  /* padding-left: 725px; */
-  /* padding-left: 43.5%; */
-  padding-left: 27%;
-}
 
-#menu-right{
-  padding-right: 2%;
-}
+
+
+
+
 
 .App {
   text-align: center;

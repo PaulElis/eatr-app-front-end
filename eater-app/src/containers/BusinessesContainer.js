@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Businesses from '../components/Businesses'
-// import NavBar from './NavBar'
 
 // const URL = 'http://localhost:3000/api/v1/businesses'
 const URL = 'https://eatr-back-end.herokuapp.com/api/v1/businesses'
@@ -71,7 +70,6 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        {/* <NavBar currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser} runSearch={this.props.runSearch} favorites={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/> */}
         <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
       </div>
     )

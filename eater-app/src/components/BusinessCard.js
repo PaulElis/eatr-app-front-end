@@ -10,9 +10,6 @@ class BusinessCard extends React.Component {
   }
 
   addReview = (userId, text, businessId) => {
-    // this.setState({
-    //   reviews: [...this.state.reviews, {userId, text, businessId}]
-    // })
     this.callFetch(userId, text, businessId)
   }
 

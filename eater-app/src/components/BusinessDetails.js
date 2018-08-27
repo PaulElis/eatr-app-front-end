@@ -41,7 +41,7 @@ class BusinessDetails extends React.Component {
 
     return (
       <Card.Group centered>
-      <Card fluid color='red'>
+      <Card fluid color='red' id='card'>
         <br></br>
         <div className='business-image'>
           <Image centered src={this.props.image} />

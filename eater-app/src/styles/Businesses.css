@@ -1,8 +1,37 @@
+  /* Portrait iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+#businesses-container {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#businesses-header {
+  font-size: 30px;
+  /* padding-left: 50px; */
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+}
+
+#grid {
+  background-size: contain;
+  background-color: white;
+  color: white;
+}
+}
+
+  /* For Web */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
 #businesses-container {
   margin-left: 50px;
   margin-right: 50px;
-  /* background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg'); */
-  /* background-image: url(https://i.pinimg.com/originals/6b/e1/84/6be1847b56e3832a614699142d1e09d8.jpg); */
 }
 
 #businesses-header {
@@ -14,8 +43,7 @@
 
 #grid {
   background-size: contain;
-  /* background-image: url('http://realpropertyalpha.com/p/2018/04/best-photos-of-mexican-restaurant-menu-backgrounds-mexican-intended-for-dinner-menu-background.jpg'); */
-  /* background-color: #A6B170; */
   background-color: white;
   color: white;
+}
 }
