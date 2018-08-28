@@ -4,37 +4,38 @@
   and (max-device-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
+
+  #home-header-container{
+    padding: 5% 2% 5% 2%;
+  }
+
   #home-header {
     color: white;
-    font-size: 20px;
+    font-size: 50px;
+    font-weight: bold;
     font-family: 'Marcellus SC', serif;
     letter-spacing: 7px;
-    /* padding-bottom: 18px; */
+    padding: 0% 0% 5% 0%;
   }
 
   div.ui.secondary.menu{
-    padding-top: 0px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   div.app-header{
     background-color: #D22C2C;
   }
-
-  #eatr-logo{
-    /* padding-left: 2%; */
-  }
-
-  #menu-right{
-    padding-right: 2%;
-  }
 }
 
 /* For Web */
 @media screen
-and (min-device-width: 1200px)
-and (max-device-width: 1600px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (min-resolution: 192dpi) {
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
   #home-header {
     color: white;
     font-size: 80px;

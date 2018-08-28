@@ -5,16 +5,16 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
 div.card {
-  height: 35rem;
+  height: 39rem;
 }
 
 #card{
-  width: 22rem;
+  width: 27rem;
 }
 
 div.business-image img{
-  height: 20rem;
-  width: 20rem;
+  height: 25rem;
+  width: 25rem;
 }
 
 #header {
