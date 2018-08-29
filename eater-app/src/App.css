@@ -6,7 +6,7 @@
   and (orientation: portrait) {
 
   #home-header-container{
-    padding: 5% 2% 5% 2%;
+    padding: 5% 4% 7% 4%;
   }
 
   #home-header {
@@ -15,7 +15,7 @@
     font-weight: bold;
     font-family: 'Marcellus SC', serif;
     letter-spacing: 7px;
-    padding: 0% 0% 5% 0%;
+    padding-bottom: 5%;
   }
 
   div.ui.secondary.menu{
@@ -30,7 +30,7 @@
   }
 }
 
-/* For Web */
+  /* For Web */
 @media screen
   and (min-device-width: 1200px)
   and (max-device-width: 1600px)
@@ -53,11 +53,11 @@
   }
 
   #eatr-logo{
-    padding-left: 27%;
+    padding-left: 25%;
   }
 
   #menu-right{
-    padding-right: 2%;
+    padding-right: 2.5%;
   }
 }
 

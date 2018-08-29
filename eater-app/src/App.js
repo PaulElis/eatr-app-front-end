@@ -92,16 +92,16 @@ class App extends Component {
         <header>
           <MediaQuery query="(orientation: portrait)" >
             <div id='home-header-container'>
-            <div id='home-header'>
-              Eatr
-            </div>
-            <Form>
-                <Form.Input icon='search' size='large' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
-            </Form>
+              <div id='home-header'>
+                Eatr
+              </div>
+              <Form>
+                  <Form.Input icon='search' size='large' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
+              </Form>
             </div>
           </MediaQuery>
 
-        <MediaQuery query="(min-device-width: 1224px)">
+          <MediaQuery query="(min-device-width: 1224px)">
             <Menu secondary>
                 <div id='eatr-logo'>
                 <Menu.Menu position='left'>
