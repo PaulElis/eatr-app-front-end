@@ -48,7 +48,7 @@ class BusinessDetails extends React.Component {
         </div>
         <Card.Content>
           <Card.Header>
-            <a href={this.props.business.url} target="_blank">{this.props.business.name}</a>
+            <a href={this.props.business.url} target="_blank">{this.props.business.name.slice(0, 22)}</a>
           </Card.Header>
           <Card.Meta>
             <span className='date'>{this.props.business.cuisine} {this.props.business.price}</span>

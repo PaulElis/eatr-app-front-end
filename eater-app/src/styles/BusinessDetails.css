@@ -1,20 +1,19 @@
-  /* Portrait iPhone 6+ 7+ 8+ */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
 div.card {
   height: 39rem;
 }
 
 #card{
+  font-size: 15px;
   width: 27rem;
 }
 
 div.business-image img{
   height: 25rem;
   width: 25rem;
+}
+
+div.header a{
+  font-size: 20px;
 }
 
 #header {
@@ -32,20 +31,20 @@ div.business-image img{
   letter-spacing: 1px;
 }
 
+div.extra.content span{
+  font-size: 12px;
+}
+
 #extra-content {
+  /* font-size: 10px;
   color: black;
   font-family: 'Marcellus SC', serif;
-  letter-spacing: 2px;
-}
+  letter-spacing: 2px; */
 }
 
 
   /* For Web */
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+@media (min-width: 992px) {
 div.card {
   height: 45rem;
 }
