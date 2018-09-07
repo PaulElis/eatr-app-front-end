@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Loader } from 'semantic-ui-react'
 import Businesses from '../components/Businesses'
 
 // const URL = 'http://localhost:3000/api/v1/businesses'
@@ -70,7 +70,10 @@ class BusinessesContainer extends React.Component {
 
     return(
       <div>
-        <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
+        {this.state.businesses === [] ?
+          <Loader>Loading</Loader>
+            : <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>}
+        {/* <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/> */}
       </div>
     )
   }

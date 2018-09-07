@@ -90,52 +90,14 @@ class App extends Component {
       <div className="App">
       <div className='app-header'>
         <header>
-          <MediaQuery query="(orientation: portrait)" >
             <div id='home-header-container'>
-              <div id='home-header'>
+              <div id='eatr-logo'>
                 Eatr
               </div>
               <Form>
                   <Form.Input icon='search' size='large' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
               </Form>
             </div>
-          </MediaQuery>
-
-          <MediaQuery query="(min-device-width: 1224px)">
-            <Menu secondary>
-                <div id='eatr-logo'>
-                <Menu.Menu position='left'>
-                  <Menu.Item>
-                    <p id='home-header'>
-                      <b>Eatr</b>
-                    </p>
-                  </Menu.Item>
-                </Menu.Menu>
-                </div>
-                <Menu.Menu position='right' id='menu-right'>
-                  <Menu.Item>
-                    <Form>
-                      <Form.Group>
-                        <Form.Input icon='search' size='small' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
-                      </Form.Group>
-                    </Form>
-                  </Menu.Item>
-                  {this.state.currentUser.username ?
-                    <div>
-                      <Current currentUser={this.state.currentUser}/>
-                    </div>
-                    :
-                  <Menu.Item>
-                    <Form onSubmit={this.handleUserSubmit}>
-                      <Form.Group>
-                        <Form.Input icon='users' iconPosition='left' size='small' name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></Form.Input>
-                        <Form.Button color='blue' content='Sign in' />
-                      </Form.Group>
-                    </Form>
-                  </Menu.Item>}
-                </Menu.Menu>
-            </Menu>
-          </MediaQuery>
         </header>
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
       </div>
