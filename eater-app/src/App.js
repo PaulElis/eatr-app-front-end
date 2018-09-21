@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Form, Menu } from 'semantic-ui-react'
-import MediaQuery from 'react-responsive';
+import { Form } from 'semantic-ui-react'
+// import MediaQuery from 'react-responsive';
 
 import BusinessesContainer from './containers/BusinessesContainer'
-import Current from './components/Current'
+// import Current from './components/Current'
 
 class App extends Component {
 

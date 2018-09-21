@@ -1,6 +1,7 @@
 import React from 'react'
-import { Loader } from 'semantic-ui-react'
+// import { Loader } from 'semantic-ui-react'
 import Businesses from '../components/Businesses'
+import '../styles/BusinessesContainer.css'
 
 // const URL = 'http://localhost:3000/api/v1/businesses'
 const URL = 'https://eatr-back-end.herokuapp.com/api/v1/businesses'
@@ -66,14 +67,16 @@ class BusinessesContainer extends React.Component {
 
   render(){
 
-    // console.log(this.state.businesses);
+    console.log(this.state.businesses);
 
     return(
       <div>
-        {this.state.businesses === [] ?
-          <Loader>Loading</Loader>
-            : <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>}
-        {/* <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/> */}
+        {this.state.businesses.length ?
+            <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
+            :
+            <div className='spinner-container'>
+              <div className="loader"></div>
+            </div>}
       </div>
     )
   }
