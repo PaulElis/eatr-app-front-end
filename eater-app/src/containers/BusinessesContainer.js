@@ -64,19 +64,16 @@ class BusinessesContainer extends React.Component {
     })
   }
 
-
   render(){
-
     console.log(this.state.businesses);
-
     return(
       <div>
-        {this.state.businesses.length ?
-            <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites}/>
+        { this.state.businesses && this.state.businesses.length ?
+          <Businesses businesses={this.state.businesses} currentUser={this.props.currentUser} favorites={this.state.favorites} addToFavorites={this.addToFavorites} />
             :
-            <div className='spinner-container'>
-              <div className="loader"></div>
-            </div>}
+          <div className='spinner-container'>
+            <div className="loader" />
+          </div> }
       </div>
     )
   }

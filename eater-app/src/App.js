@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     currentUser: {},
     searchRan: false,
-    searchTerm: "",
+    searchTerm: null,
     location: "",
     username: "",
     users: "",
@@ -95,8 +95,14 @@ class App extends Component {
                 Eatr
               </div>
               <Form>
-                  <Form.Input icon='search' size='large' name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange}></Form.Input>
+                  <Form.Input icon='search' size='large' name="searchTerm" placeholder="Find restaurants, bars.." /*value={this.state.searchTerm}*/ onChange={this.handleSearchChange} />
               </Form>
+              {/* <form>
+                <input type="text" name="searchTerm" placeholder="Find restaurants, bars.." value={this.state.searchTerm} onChange={this.handleSearchChange} />
+              </form> */}
+              {/* <Button size='large' color='blue' icon labelPosition='right' onClick={this.handleSearchChange}>
+                Go
+              </Button> */}
             </div>
         </header>
           <BusinessesContainer currentUser={this.state.currentUser} searchTerm={this.state.searchTerm} location={this.state.location} setCurrentUser={this.setCurrentUser} runSearch={this.runSearch}/>
